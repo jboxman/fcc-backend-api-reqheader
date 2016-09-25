@@ -1,3 +1,3 @@
 // Bootstrap babel
 require('babel-register')();
-require('./app');
+require('./app').default();
