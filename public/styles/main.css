@@ -1,0 +1,19 @@
+body {
+  margin: 0 auto;
+  width: 80%;
+}
+#fp {
+  opacity: 0;
+}
+.content {
+  margin-bottom: 1em;
+}
+pre {
+  margin: 1em;
+}
+
+footer {
+  border-top: 1px #ECECEC solid;
+  margin: 1em;
+  padding: 0.5em;
+}
