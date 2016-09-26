@@ -70,7 +70,7 @@ require("source-map-support").install();
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(__dirname) {'use strict';
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -81,7 +81,8 @@ exports.default = function () {
 
   var port = process.env.PORT || 3100;
 
-  app.use(_express2.default.static(__dirname + '/public'));
+  // http://webpack.github.io/docs/configuration.html#node
+  app.use(_express2.default.static(process.cwd() + '/public'));
 
   app.get('/fingerprint', function (req, res) {
     var os = (0, _uaParserJs2.default)(req.header('User-Agent')).os.name || null;
@@ -116,7 +117,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // For testing:
 // https://glebbahmutov.com/blog/how-to-correctly-unit-test-express-server/
-/* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
 /***/ },
 /* 1 */
