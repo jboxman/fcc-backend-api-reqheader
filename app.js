@@ -8,7 +8,8 @@ export default function() {
 
   const port = process.env.PORT || 3100;
 
-  app.use(express.static(`${__dirname}/public`));
+  // http://webpack.github.io/docs/configuration.html#node
+  app.use(express.static(`${process.cwd()}/public`));
 
   app.get('/fingerprint', function(req, res) {
     const os = uaParser(req.header('User-Agent')).os.name || null;

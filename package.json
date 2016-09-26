@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel open:src",
     "test": "babel-tape-runner tests/**/*.js",
+    "build": "webpack",
     "open:src": "node-dev --no-notify devSrc.js"
   },
   "keywords": [],
